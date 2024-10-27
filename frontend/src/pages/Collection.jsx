@@ -1,10 +1,14 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import BreadCrumb from "../components/BreadCrumb";
 import { SHOP_CONTEXT } from "../context/shopContext";
 import ProductItem from "../components/ProductItem";
 
 const Collection = () => {
   let { products } = useContext(SHOP_CONTEXT);
+  let [filterProducts, setFilterProducts] = useState([]);
+  useEffect(() => {
+    setFilterProducts(products);
+  }, [products]);
   return (
     <>
       <BreadCrumb currentPage="Shop" />
@@ -36,14 +40,13 @@ const Collection = () => {
                     id="c-1"
                     className="h-4 w-4 rounded accent-green-700"
                     type="checkbox"
-                    defaultValue="new-arrivals"
-                    name="category[]"
+                    value={"men"}
                   />
                   <label
                     htmlFor="c-1"
                     className="ml-3 not-italic font-normal text-sm leading-[21px] text-[#1A1A1A]"
                   >
-                    Fresh Fruit (25)
+                    Men
                   </label>
                 </div>
                 <div className="flex items-center">
@@ -51,14 +54,13 @@ const Collection = () => {
                     id="c-2"
                     className="h-4 w-4 rounded accent-green-700"
                     type="checkbox"
-                    defaultValue="new-arrivals"
-                    name="category[]"
+                    value={"women"}
                   />
                   <label
-                    htmlFor="cat-2"
+                    htmlFor="c-2"
                     className="ml-3 not-italic font-normal text-sm leading-[21px] text-[#1A1A1A]"
                   >
-                    Vegetables (150)
+                    Women
                   </label>
                 </div>
                 <div className="flex items-center">
@@ -66,14 +68,77 @@ const Collection = () => {
                     id="c-3"
                     className="h-4 w-4 rounded accent-green-700"
                     type="checkbox"
-                    defaultValue="new-arrivals"
-                    name="category[]"
+                    value={"kids"}
                   />
                   <label
-                    htmlFor="cat-3"
+                    htmlFor="c-3"
                     className="ml-3 not-italic font-normal text-sm leading-[21px] text-[#1A1A1A]"
                   >
-                    Beauty &amp; Health (20)
+                    Kids
+                  </label>
+                </div>
+              </div>
+            </details>
+            <details className="group space-y-3" open="true">
+              <summary className="flex justify-between items-center  cursor-pointer list-none not-italic font-medium text-xl leading-[30px] text-[#1A1A1A]">
+                <span>All Categories</span>
+                <span className="transition group-open:rotate-180">
+                  <svg
+                    fill="none"
+                    height={24}
+                    shapeRendering="geometricPrecision"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                    viewBox="0 0 24 24"
+                    width={24}
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="text-neutral-600 group-open:animate-fadeIn space-y-3">
+                <div className="flex items-center ">
+                  <input
+                    id="c2-1"
+                    className="h-4 w-4 rounded accent-green-700"
+                    type="checkbox"
+                    value={"topwear"}
+                  />
+                  <label
+                    htmlFor="c2-1"
+                    className="ml-3 not-italic font-normal text-sm leading-[21px] text-[#1A1A1A]"
+                  >
+                    Topwear
+                  </label>
+                </div>
+                <div className="flex items-center">
+                  <input
+                    id="c2-2"
+                    className="h-4 w-4 rounded accent-green-700"
+                    type="checkbox"
+                    value={"bottomwear"}
+                  />
+                  <label
+                    htmlFor="c2-2"
+                    className="ml-3 not-italic font-normal text-sm leading-[21px] text-[#1A1A1A]"
+                  >
+                    Bottomwear
+                  </label>
+                </div>
+                <div className="flex items-center">
+                  <input
+                    id="c2-3"
+                    className="h-4 w-4 rounded accent-green-700"
+                    type="checkbox"
+                    value={"winter"}
+                  />
+                  <label
+                    htmlFor="c2-3"
+                    className="ml-3 not-italic font-normal text-sm leading-[21px] text-[#1A1A1A]"
+                  >
+                    Winter
                   </label>
                 </div>
               </div>
@@ -348,12 +413,12 @@ const Collection = () => {
           <div className="col-span-5 lg:col-span-5 xl:col-span-4">
             <div className="flex flex-row flex-wrap content-center justify-between items-center mb-5 gap-5">
               <p className="not-italic text-base leading-[19px] text-[#1A1A1A]">
-                <span className="font-semibold">{products.length}</span> Results
-                Found
+                <span className="font-semibold">{filterProducts?.length}</span>{" "}
+                Results Found
               </p>
               <div className="flex items-center gap-x-3">
                 <p>Sort by:</p>
-                <select className="p-3 border rounded border-solid border-[#E6E6E6]">
+                <select className="h-[40px] w-[120px] border rounded border-solid border-[#E6E6E6]">
                   <option value={"relavent"}>Relavent</option>
                   <option value={"low-high"}>Low to High</option>
                   <option value={"high-low"}>High to Low</option>
@@ -361,7 +426,7 @@ const Collection = () => {
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2  gap-6 xl:grid-cols-3">
-              {products.map((item, index) => {
+              {filterProducts.map((item, index) => {
                 return <ProductItem key={index} item={item} />;
               })}
             </div>
