@@ -3,7 +3,7 @@ const BreadCrumb = (props) => {
   return (
     <section
       id="breadcrumb"
-      className="bg-[url('./img/bg/category.svg')] bg-top bg-no-repeat bg-cover py-12"
+      className="bg-[url('/img/bg/category.svg')] bg-top bg-no-repeat bg-cover py-12"
     >
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 xl:px-0 flex items-center">
         <ol className="flex items-center whitespace-nowrap flex-wrap">
