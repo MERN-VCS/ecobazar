@@ -6,9 +6,70 @@ import ProductItem from "../components/ProductItem";
 const Collection = () => {
   let { products } = useContext(SHOP_CONTEXT);
   let [filterProducts, setFilterProducts] = useState([]);
+  let [category, setCategory] = useState([]);
+  let [subCategory, setSubCategory] = useState([]);
+  let [sortType, setSortType] = useState("relavent");
+
+  let toggleCategory = (e) => {
+    if (category.includes(e.target.value.toLowerCase())) {
+      setCategory((prev) => {
+        return prev.filter((item) => item !== e.target.value);
+      });
+    } else {
+      setCategory((prev) => {
+        return [...prev, e.target.value.toLowerCase()];
+      });
+    }
+  };
+
+  let toggleSubCategory = (e) => {
+    if (subCategory.includes(e.target.value.toLowerCase())) {
+      setSubCategory((prev) => {
+        return prev.filter((item) => item !== e.target.value);
+      });
+    } else {
+      setSubCategory((prev) => {
+        return [...prev, e.target.value.toLowerCase()];
+      });
+    }
+  };
+
+  let applyFilter = () => {
+    let copyProducts = products.slice();
+    if (category.length > 0) {
+      copyProducts = copyProducts.filter((item) => {
+        return category.includes(item.category.toLowerCase());
+      });
+    }
+    if (subCategory.length > 0) {
+      copyProducts = copyProducts.filter((item) => {
+        return subCategory.includes(item.subCategory.toLowerCase());
+      });
+    }
+    setFilterProducts(copyProducts);
+  };
+
+  let applySort = () => {
+    let existingFilter = [...filterProducts];
+    if (sortType === "low-high") {
+      existingFilter = existingFilter.sort((a, b) => a.price - b.price);
+      setFilterProducts(existingFilter);
+    } else if (sortType === "high-low") {
+      existingFilter = existingFilter.sort((a, b) => b.price - a.price);
+      setFilterProducts(existingFilter);
+    } else {
+      applyFilter();
+    }
+  };
+
   useEffect(() => {
-    setFilterProducts(products);
-  }, [products]);
+    applyFilter();
+  }, [category, subCategory]);
+
+  useEffect(() => {
+    applySort();
+  }, [sortType]);
+
   return (
     <>
       <BreadCrumb currentPage="Shop" />
@@ -41,6 +102,9 @@ const Collection = () => {
                     className="h-4 w-4 rounded accent-green-700"
                     type="checkbox"
                     value={"men"}
+                    onChange={(e) => {
+                      toggleCategory(e);
+                    }}
                   />
                   <label
                     htmlFor="c-1"
@@ -55,6 +119,9 @@ const Collection = () => {
                     className="h-4 w-4 rounded accent-green-700"
                     type="checkbox"
                     value={"women"}
+                    onChange={(e) => {
+                      toggleCategory(e);
+                    }}
                   />
                   <label
                     htmlFor="c-2"
@@ -69,6 +136,9 @@ const Collection = () => {
                     className="h-4 w-4 rounded accent-green-700"
                     type="checkbox"
                     value={"kids"}
+                    onChange={(e) => {
+                      toggleCategory(e);
+                    }}
                   />
                   <label
                     htmlFor="c-3"
@@ -105,6 +175,9 @@ const Collection = () => {
                     className="h-4 w-4 rounded accent-green-700"
                     type="checkbox"
                     value={"topwear"}
+                    onChange={(e) => {
+                      toggleSubCategory(e);
+                    }}
                   />
                   <label
                     htmlFor="c2-1"
@@ -119,6 +192,9 @@ const Collection = () => {
                     className="h-4 w-4 rounded accent-green-700"
                     type="checkbox"
                     value={"bottomwear"}
+                    onChange={(e) => {
+                      toggleSubCategory(e);
+                    }}
                   />
                   <label
                     htmlFor="c2-2"
@@ -133,6 +209,9 @@ const Collection = () => {
                     className="h-4 w-4 rounded accent-green-700"
                     type="checkbox"
                     value={"winter"}
+                    onChange={(e) => {
+                      toggleSubCategory(e);
+                    }}
                   />
                   <label
                     htmlFor="c2-3"
@@ -418,7 +497,10 @@ const Collection = () => {
               </p>
               <div className="flex items-center gap-x-3">
                 <p>Sort by:</p>
-                <select className="h-[40px] w-[120px] border rounded border-solid border-[#E6E6E6]">
+                <select
+                  className="h-[40px] w-[120px] border rounded border-solid border-[#E6E6E6]"
+                  onChange={(e) => setSortType(e.target.value)}
+                >
                   <option value={"relavent"}>Relavent</option>
                   <option value={"low-high"}>Low to High</option>
                   <option value={"high-low"}>High to Low</option>

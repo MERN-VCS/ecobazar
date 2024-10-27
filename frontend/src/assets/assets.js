@@ -363,7 +363,7 @@ export const products = [
     price: 170,
     image: [p_img21],
     category: "Women",
-    subCategory: "Winterwear",
+    subCategory: "winter",
     sizes: ["S", "M", "L", "XL"],
     date: 1716634345448,
     bestseller: false,
