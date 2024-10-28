@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import LiveSearch from "./LiveSearch";
 
 const Header = () => {
   let menus = [
@@ -25,25 +26,8 @@ const Header = () => {
         >
           <img className="" src="img/header/logo.svg" alt="logo" />
         </Link>
-        <form className="flex order-3 w-full md:w-[50%] md:order-2" action="#">
-          <input
-            className="block p-3 pl-4 w-full text-sm text-gray-900 bg-white border border-[#00B307] rounded-none rounded-l-lg focus:ring-[#00B307] focus:border-[#00B307] outline-none caret-[#00B307]"
-            placeholder="Search Here .."
-            id="search"
-            type="text"
-            autoComplete="off"
-          />
-          <button
-            type="submit"
-            className="px-5 text-sm font-medium text-center text-white rounded-none rounded-r-lg border border-[#00B307] cursor-pointer bg-[#00B307]"
-          >
-            <img
-              className="w-7 h-7"
-              src="img/header/search.svg"
-              alt="search icon"
-            />
-          </button>
-        </form>
+        {/* Live Search  */}
+        <LiveSearch />
         <div className="flex order-2 ml-auto md:ml-0 md:order-3 gap-x-3 md:gap-x-5">
           <Link to="#" className="flex mr-[-25px]">
             <span className="p-2 bg-[#00B307] w-5 h-5 rounded-full inline-flex items-center justify-center ml-1 text-xs font-bold text-white left-[40px] relative">
