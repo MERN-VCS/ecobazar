@@ -1,11 +1,13 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { SHOP_CONTEXT } from "../context/shopContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LiveSearch = () => {
+  const navigateTo = useNavigate();
   let { products } = useContext(SHOP_CONTEXT);
   let [liveData, setLiveData] = useState([]);
   const searchBoxRef = useRef(null);
+  const inputBoxRef = useRef();
 
   let searchData = (query) => {
     if (query?.length) {
@@ -23,7 +25,13 @@ const LiveSearch = () => {
       setLiveData([]);
     }
   };
-
+  // whenPressEnterButton
+  let whenOnSubmit = (e) => {
+    e.preventDefault();
+    let searchQuery = inputBoxRef.current.value;
+    navigateTo(`/collection?query=${searchQuery}`);
+    setLiveData([]);
+  };
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -35,11 +43,14 @@ const LiveSearch = () => {
     <>
       <form
         className=" order-3 w-full md:w-[50%] md:order-2 relative"
-        action="#"
+        onSubmit={(e) => {
+          whenOnSubmit(e);
+        }}
       >
         <div className="flex">
           {/* rounded-none rounded-l-lg */}
           <input
+            ref={inputBoxRef}
             className="block p-3 pl-4 w-full text-sm text-gray-900 bg-white border border-[#00B307]  focus:ring-[#00B307] focus:border-[#00B307] outline-none caret-[#00B307]"
             placeholder="Search Here .."
             id="search"

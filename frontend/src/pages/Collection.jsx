@@ -2,14 +2,32 @@ import { useContext, useEffect, useState } from "react";
 import BreadCrumb from "../components/BreadCrumb";
 import { SHOP_CONTEXT } from "../context/shopContext";
 import ProductItem from "../components/ProductItem";
+import { useLocation } from "react-router-dom";
 
 const Collection = () => {
   let { products } = useContext(SHOP_CONTEXT);
+  // get Query
+  let location = useLocation();
+  let searchParams = new URLSearchParams(location.search);
+  let searchQuery = searchParams.get("query");
+  // Define State
   let [filterProducts, setFilterProducts] = useState([]);
   let [category, setCategory] = useState([]);
   let [subCategory, setSubCategory] = useState([]);
   let [sortType, setSortType] = useState("relavent");
 
+  // Define Effect
+  useEffect(() => {
+    applyFilter();
+  }, [category, subCategory, searchQuery]);
+
+  useEffect(() => {
+    applySort();
+  }, [sortType]);
+
+  // Functions
+
+  // Category
   let toggleCategory = (e) => {
     if (category.includes(e.target.value.toLowerCase())) {
       setCategory((prev) => {
@@ -22,6 +40,7 @@ const Collection = () => {
     }
   };
 
+  // Sub Category
   let toggleSubCategory = (e) => {
     if (subCategory.includes(e.target.value.toLowerCase())) {
       setSubCategory((prev) => {
@@ -34,21 +53,7 @@ const Collection = () => {
     }
   };
 
-  let applyFilter = () => {
-    let copyProducts = products.slice();
-    if (category.length > 0) {
-      copyProducts = copyProducts.filter((item) => {
-        return category.includes(item.category.toLowerCase());
-      });
-    }
-    if (subCategory.length > 0) {
-      copyProducts = copyProducts.filter((item) => {
-        return subCategory.includes(item.subCategory.toLowerCase());
-      });
-    }
-    setFilterProducts(copyProducts);
-  };
-
+  // Sorting
   let applySort = () => {
     let existingFilter = [...filterProducts];
     if (sortType === "low-high") {
@@ -62,13 +67,26 @@ const Collection = () => {
     }
   };
 
-  useEffect(() => {
-    applyFilter();
-  }, [category, subCategory]);
-
-  useEffect(() => {
-    applySort();
-  }, [sortType]);
+  // Final Filter
+  let applyFilter = () => {
+    let copyProducts = products.slice();
+    if (category.length > 0) {
+      copyProducts = copyProducts.filter((item) => {
+        return category.includes(item.category.toLowerCase());
+      });
+    }
+    if (subCategory.length > 0) {
+      copyProducts = copyProducts.filter((item) => {
+        return subCategory.includes(item.subCategory.toLowerCase());
+      });
+    }
+    if (searchQuery) {
+      copyProducts = copyProducts?.filter((item) =>
+        item?.name?.toLowerCase().includes(searchQuery?.toLowerCase())
+      );
+    }
+    setFilterProducts(copyProducts);
+  };
 
   return (
     <>
