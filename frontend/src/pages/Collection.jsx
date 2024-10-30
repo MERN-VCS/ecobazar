@@ -310,27 +310,27 @@ const Collection = () => {
                       <div className="flex items-center space-x-px">
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/full.svg"
+                          src="/img/rating/full.svg"
                           alt="yellow-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/full.svg"
+                          src="/img/rating/full.svg"
                           alt="yellow-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/full.svg"
+                          src="/img/rating/full.svg"
                           alt="yellow-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/full.svg"
+                          src="/img/rating/full.svg"
                           alt="yellow-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/full.svg"
+                          src="/img/rating/full.svg"
                           alt="yellow-star"
                         />
                       </div>
@@ -351,27 +351,27 @@ const Collection = () => {
                       <div className="flex items-center space-x-px">
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/full.svg"
+                          src="/img/rating/full.svg"
                           alt="yellow-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/full.svg"
+                          src="/img/rating/full.svg"
                           alt="yellow-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/full.svg"
+                          src="/img/rating/full.svg"
                           alt="yellow-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/full.svg"
+                          src="/img/rating/full.svg"
                           alt="yellow-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/blank.svg"
+                          src="/img/rating/blank.svg"
                           alt="blank-star"
                         />
                       </div>
@@ -392,27 +392,27 @@ const Collection = () => {
                       <div className="flex items-center space-x-px">
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/full.svg"
+                          src="/img/rating/full.svg"
                           alt="yellow-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/full.svg"
+                          src="/img/rating/full.svg"
                           alt="yellow-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/full.svg"
+                          src="/img/rating/full.svg"
                           alt="yellow-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/blank.svg"
+                          src="/img/rating/blank.svg"
                           alt="blank-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/blank.svg"
+                          src="/img/rating/blank.svg"
                           alt="blank-star"
                         />
                       </div>
@@ -433,27 +433,27 @@ const Collection = () => {
                       <div className="flex items-center space-x-px">
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/full.svg"
+                          src="/img/rating/full.svg"
                           alt="yellow-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/full.svg"
+                          src="/img/rating/full.svg"
                           alt="yellow-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/blank.svg"
+                          src="/img/rating/blank.svg"
                           alt="blank-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/blank.svg"
+                          src="/img/rating/blank.svg"
                           alt="blank-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/blank.svg"
+                          src="/img/rating/blank.svg"
                           alt="blank-star"
                         />
                       </div>
@@ -474,27 +474,27 @@ const Collection = () => {
                       <div className="flex items-center space-x-px">
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/full.svg"
+                          src="/img/rating/full.svg"
                           alt="yellow-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/blank.svg"
+                          src="/img/rating/blank.svg"
                           alt="blank-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/blank.svg"
+                          src="/img/rating/blank.svg"
                           alt="blank-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/blank.svg"
+                          src="/img/rating/blank.svg"
                           alt="blank-star"
                         />
                         <img
                           className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                          src="img/rating/blank.svg"
+                          src="/img/rating/blank.svg"
                           alt="blank-star"
                         />
                       </div>

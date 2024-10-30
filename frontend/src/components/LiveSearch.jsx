@@ -70,7 +70,7 @@ const LiveSearch = () => {
           >
             <img
               className="w-7 h-7"
-              src="img/header/search.svg"
+              src="/img/header/search.svg"
               alt="search icon"
             />
           </button>

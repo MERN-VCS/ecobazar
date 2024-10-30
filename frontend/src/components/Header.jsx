@@ -24,7 +24,7 @@ const Header = () => {
           className="order-1 md:order-1 w-[40%] md:w-auto md:mr-[20px] lg:mr-[0px]"
           to="/"
         >
-          <img className="" src="img/header/logo.svg" alt="logo" />
+          <img className="" src="/img/header/logo.svg" alt="logo" />
         </Link>
         {/* Live Search  */}
         <LiveSearch />
@@ -33,13 +33,13 @@ const Header = () => {
             <span className="p-2 bg-[#00B307] w-5 h-5 rounded-full inline-flex items-center justify-center ml-1 text-xs font-bold text-white left-[40px] relative">
               99
             </span>
-            <img src="img/header/heart.svg" alt="heart" />
+            <img src="/img/header/heart.svg" alt="heart" />
           </Link>
           <Link className="flex" to="/cart">
             <span className="p-2 bg-[#00B307] w-5 h-5 rounded-full inline-flex items-center justify-center ml-1 text-xs font-bold text-white left-[35px] relative">
               25
             </span>
-            <img src="img/header/bag.svg" alt="bag" />
+            <img src="/img/header/bag.svg" alt="bag" />
           </Link>
           {/* <Link className="space-y-2" to="/cart">
             <p className="not-italic font-normal text-sm leading-[13px] text-[#4D4D4D]">
@@ -53,7 +53,7 @@ const Header = () => {
             <div className="relative">
               <img
                 className="w-10 h-10 rounded-full"
-                src="img/header/avatar.svg"
+                src="/img/header/avatar.svg"
                 alt=""
               />
               <span className="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
@@ -117,7 +117,7 @@ const Header = () => {
         </ul>
         <Link to="#" className="flex gap-x-1 items-center space-x-1">
           <img
-            src="img/header/phone.svg"
+            src="/img/header/phone.svg"
             className="w-[32px] h-[32px] md:mt-2"
             alt="Phone call"
           />

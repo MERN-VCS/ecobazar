@@ -45,27 +45,27 @@ const ProductItem = (props) => {
             <div className="flex items-center space-x-px">
               <img
                 className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                src="img/rating/full.svg"
+                src="/img/rating/full.svg"
                 alt="yellow-star"
               />
               <img
                 className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                src="img/rating/full.svg"
+                src="/img/rating/full.svg"
                 alt="yellow-star"
               />
               <img
                 className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                src="img/rating/full.svg"
+                src="/img/rating/full.svg"
                 alt="yellow-star"
               />
               <img
                 className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                src="img/rating/full.svg"
+                src="/img/rating/full.svg"
                 alt="yellow-star"
               />
               <img
                 className="w-3 h-3 text-yellow-400 sm:w-4 sm:h-4"
-                src="img/rating/blank.svg"
+                src="/img/rating/blank.svg"
                 alt="blank-star"
               />
             </div>
@@ -73,24 +73,24 @@ const ProductItem = (props) => {
           <div className="flex space-x-3">
             <div className="cursor-pointer">
               <img
-                src="img/wishlist/heart-green.svg"
+                src="/img/wishlist/heart-green.svg"
                 className="hidden w-[26px] h-[26px]"
                 alt="wishlist"
               />
               <img
-                src="img/wishlist/heart-black.svg"
+                src="/img/wishlist/heart-black.svg"
                 className="w-[26px] h-[26px]"
                 alt="wishlist"
               />
             </div>
             <Link className="cursor-pointer" href="/cart">
               <img
-                src="img/cart/bag-green.svg"
+                src="/img/cart/bag-green.svg"
                 className="hidden w-[24px] h-[24px]"
                 alt="Cart"
               />
               <img
-                src="img/cart/bag-black.svg"
+                src="/img/cart/bag-black.svg"
                 className="w-[24px] h-[24px]"
                 alt="Cart"
               />

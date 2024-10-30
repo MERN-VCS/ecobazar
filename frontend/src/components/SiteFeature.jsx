@@ -9,12 +9,12 @@ const SiteFeature = () => {
           <div className="flex justify-center items-center bg-[url('img/feature/bg-low.svg')] group-hover:bg-[url('img/feature/bg-habby.svg')] h-[72px] w-[72px] bg-no-repeat bg-cover transition-all duration-500 ease-in-out">
             <img
               className="block group-hover:hidden transition-opacity duration-500 ease-in-out"
-              src="img/feature/free-shipping-green.svg"
+              src="/img/feature/free-shipping-green.svg"
               alt="Free Shipping Green"
             />
             <img
               className="hidden group-hover:block transition-opacity duration-500 ease-in-out"
-              src="img/feature/free-shipping-white.svg"
+              src="/img/feature/free-shipping-white.svg"
               alt="Free Shipping White"
             />
           </div>
@@ -31,12 +31,12 @@ const SiteFeature = () => {
           <div className="flex justify-center items-center bg-[url('img/feature/bg-low.svg')] group-hover:bg-[url('img/feature/bg-habby.svg')] h-[72px] w-[72px] bg-no-repeat bg-cover transition-all duration-500 ease-in-out ">
             <img
               className="block group-hover:hidden transition-opacity duration-500 ease-in-out"
-              src="img/feature/great-support-green.svg"
+              src="/img/feature/great-support-green.svg"
               alt="Free Shipping Green"
             />
             <img
               className="hidden group-hover:block transition-opacity duration-500 ease-in-out"
-              src="img/feature/great-support-white.svg"
+              src="/img/feature/great-support-white.svg"
               alt="Free Shipping White"
             />
           </div>
@@ -53,12 +53,12 @@ const SiteFeature = () => {
           <div className="flex justify-center items-center bg-[url('img/feature/bg-low.svg')] group-hover:bg-[url('img/feature/bg-habby.svg')] h-[72px] w-[72px] bg-no-repeat bg-cover transition-all duration-500 ease-in-out">
             <img
               className="block group-hover:hidden transition-opacity duration-500 ease-in-out"
-              src="img/feature/secure-payment-green.svg"
+              src="/img/feature/secure-payment-green.svg"
               alt="Free Shipping Green"
             />
             <img
               className="hidden group-hover:block transition-opacity duration-500 ease-in-out"
-              src="img/feature/secure-payment-white.svg"
+              src="/img/feature/secure-payment-white.svg"
               alt="Free Shipping White"
             />
           </div>
@@ -75,12 +75,12 @@ const SiteFeature = () => {
           <div className="flex justify-center items-center bg-[url('img/feature/bg-low.svg')] group-hover:bg-[url('img/feature/bg-habby.svg')] h-[72px] w-[72px] bg-no-repeat bg-cover transition-all duration-500 ease-in-out">
             <img
               className="block group-hover:hidden transition-opacity duration-500 ease-in-out"
-              src="img/feature/money-back-green.svg"
+              src="/img/feature/money-back-green.svg"
               alt="Free Shipping Green"
             />
             <img
               className="hidden group-hover:block transition-opacity duration-500 ease-in-out"
-              src="img/feature/money-back-white.svg"
+              src="/img/feature/money-back-white.svg"
               alt="Free Shipping White"
             />
           </div>

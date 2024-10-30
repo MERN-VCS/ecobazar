@@ -27,7 +27,7 @@ const Footer = () => {
                 <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                   <img
                     className="w-4 h-4 text-gray-500"
-                    src="img/footer/email.svg"
+                    src="/img/footer/email.svg"
                     alt="email-icon"
                   />
                 </div>
@@ -149,7 +149,7 @@ const Footer = () => {
                   <div className="flex py-4 first:pt-0 last:pb-0 items-center">
                     <img
                       className="h-6 w-6 rounded-full object-cover"
-                      src="img/footer/bangladesh.svg"
+                      src="/img/footer/bangladesh.svg"
                       alt="Bangladesh flag"
                     />
                     <Link
@@ -164,7 +164,7 @@ const Footer = () => {
                   <div className="flex py-4 first:pt-0 last:pb-0 items-center">
                     <img
                       className="h-6 w-6 rounded-full object-cover"
-                      src="img/footer/pakistan.svg"
+                      src="/img/footer/pakistan.svg"
                       alt="Pakistan flag"
                     />
                     <Link
@@ -179,7 +179,7 @@ const Footer = () => {
                   <div className="flex py-4 first:pt-0 last:pb-0 items-center">
                     <img
                       className="h-6 w-6 rounded-full object-cover"
-                      src="img/footer/myanmar.svg"
+                      src="/img/footer/myanmar.svg"
                       alt="myanmar flag"
                     />
                     <Link
@@ -194,7 +194,7 @@ const Footer = () => {
                   <div className="flex py-4 first:pt-0 last:pb-0 items-center">
                     <img
                       className="h-6 w-6 rounded-full object-cover"
-                      src="img/footer/india.svg"
+                      src="/img/footer/india.svg"
                       alt="india flag"
                     />
                     <Link
@@ -214,12 +214,12 @@ const Footer = () => {
               <ul className="text-gray-500">
                 <li className="mb-4">
                   <Link className="" to="#">
-                    <img src="img/footer/googleplay.svg" alt="play store" />
+                    <img src="/img/footer/googleplay.svg" alt="play store" />
                   </Link>
                 </li>
                 <li className="mb-4">
                   <Link className="" to="#">
-                    <img src="img/footer/appstore.svg" alt="app store" />
+                    <img src="/img/footer/appstore.svg" alt="app store" />
                   </Link>
                 </li>
               </ul>
@@ -240,7 +240,7 @@ const Footer = () => {
             >
               <img
                 alt="Payment Methods"
-                src="img/footer/payment-methods.svg"
+                src="/img/footer/payment-methods.svg"
                 className="rounded"
               />
             </Link>

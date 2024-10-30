@@ -25,7 +25,7 @@ const BestSeller = () => {
           className="not-italic font-medium text-sm sm:text-base text-[#00B307] flex gap-x-2"
         >
           View All
-          <img src="img/heading/right-arrow.svg" alt="" srcSet="" />
+          <img src="/img/heading/right-arrow.svg" alt="" srcSet="" />
         </Link>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">

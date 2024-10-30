@@ -28,7 +28,7 @@ const Hero = () => {
                 <div className="w-full md:w-1/2">
                   <img
                     className="w-full"
-                    src="img/slider/image-1.svg"
+                    src="/img/slider/image-1.svg"
                     alt="fruits"
                   />
                 </div>
@@ -50,7 +50,7 @@ const Hero = () => {
                     to={"#"}
                   >
                     Shop now
-                    <img src="img/slider/right-arrow.svg" alt="right arrow" />
+                    <img src="/img/slider/right-arrow.svg" alt="right arrow" />
                   </Link>
                 </div>
               </div>
@@ -62,7 +62,7 @@ const Hero = () => {
                 <div className="w-full md:w-1/2">
                   <img
                     className="w-full"
-                    src="img/slider/image-2.png"
+                    src="/img/slider/image-2.png"
                     alt="fruits"
                   />
                 </div>
@@ -84,7 +84,7 @@ const Hero = () => {
                     to={"#"}
                   >
                     Shop now
-                    <img src="img/slider/right-arrow.svg" alt="right arrow" />
+                    <img src="/img/slider/right-arrow.svg" alt="right arrow" />
                   </Link>
                 </div>
               </div>
@@ -96,7 +96,7 @@ const Hero = () => {
                 <div className="w-full md:w-1/2">
                   <img
                     className="w-full"
-                    src="img/slider/image-3.svg"
+                    src="/img/slider/image-3.svg"
                     alt="fruits"
                   />
                 </div>
@@ -118,7 +118,7 @@ const Hero = () => {
                     to={"#"}
                   >
                     Shop now
-                    <img src="img/slider/right-arrow.svg" alt="right arrow" />
+                    <img src="/img/slider/right-arrow.svg" alt="right arrow" />
                   </Link>
                 </div>
               </div>
