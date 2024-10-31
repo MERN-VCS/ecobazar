@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const BreadCrumb = (props) => {
   let { currentPage } = props;
   return (
@@ -8,9 +10,9 @@ const BreadCrumb = (props) => {
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 xl:px-0 flex items-center">
         <ol className="flex items-center whitespace-nowrap flex-wrap">
           <li className="inline-flex items-center">
-            <a
+            <Link
               className="flex items-center text-sm text-gray-500 hover:text-[#00B307] focus:outline-none focus:text-[#00B307] dark:text-neutral-500 dark:hover:text-[#00B307] dark:focus:text-[#00B307]"
-              href="#"
+              to="#"
             >
               <svg
                 className="shrink-0 me-3 size-4"
@@ -28,7 +30,7 @@ const BreadCrumb = (props) => {
                 <polyline points="9 22 9 12 15 12 15 22" />
               </svg>
               Home
-            </a>
+            </Link>
             <svg
               className="shrink-0 mx-2 size-4 text-gray-400 dark:text-neutral-600"
               xmlns="http://www.w3.org/2000/svg"

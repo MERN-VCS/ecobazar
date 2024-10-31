@@ -1,11 +1,12 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import BreadCrumb from "../components/BreadCrumb";
 import { useContext, useEffect, useState } from "react";
 import { SHOP_CONTEXT } from "../context/shopContext";
+import RelatedProducts from "../components/RelatedProducts";
 
 const Product = () => {
   let { productId } = useParams();
-  let { products, currency } = useContext(SHOP_CONTEXT);
+  let { products, currency, addToCart } = useContext(SHOP_CONTEXT);
   let [data, setData] = useState({});
   let [defaultImage, setDefaultImage] = useState("");
   let [size, setSize] = useState("");
@@ -114,12 +115,12 @@ const Product = () => {
                   ·
                 </div>
                 <div className="ml-4 flex">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="text-sm font-medium text-slate-600 hover:text-slate-500"
                   >
                     See all 512 reviews
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div> */}
@@ -214,12 +215,12 @@ const Product = () => {
               <div className="">
                 <div className="flex items-center justify-between">
                   <h2 className="text-sm font-medium text-gray-900">Size</h2>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="text-sm font-medium text-slate-600 hover:text-slate-500"
                   >
                     See sizing chart
-                  </a>
+                  </Link>
                 </div>
                 <div
                   className="mt-2"
@@ -326,8 +327,10 @@ const Product = () => {
                 </div>
               </div>
               <button
-                type="submit"
-                className="mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-[#00B307] px-8 py-3 text-base font-medium text-white hover:bg-[#00B307] "
+                className="mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-[#00B307] px-8 py-3 text-base font-medium text-white hover:bg-[#00B307]"
+                onClick={(e) => {
+                  addToCart(e, data?._id, size);
+                }}
               >
                 Add to cart
               </button>
@@ -530,44 +533,10 @@ const Product = () => {
             </div>
           </div>
         </section> */}
-        <section aria-labelledby="related-heading" className="mt-16 sm:mt-24">
-          <h2
-            id="related-heading"
-            className="text-lg font-medium text-gray-900"
-          >
-            Customers also purchased
-          </h2>
-          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-            <div className="group relative">
-              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75 lg:h-80">
-                <img
-                  alt="Front of men's Basic Tee in white."
-                  loading="lazy"
-                  width={1216}
-                  height={1680}
-                  decoding="async"
-                  data-nimg={1}
-                  className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-                  srcSet="https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-02.jpg 2x"
-                  src="https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-02.jpg"
-                  style={{ color: "transparent" }}
-                />
-              </div>
-              <div className="mt-4 flex justify-between">
-                <div>
-                  <h3 className="text-sm text-gray-700">
-                    <a href="#">
-                      <span aria-hidden="true" className="absolute inset-0" />
-                      Basic Tee
-                    </a>
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-500">Aspen White</p>
-                </div>
-                <p className="text-sm font-medium text-gray-900">35 €</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <RelatedProducts
+          category={data?.category}
+          subCategory={data?.subCategory}
+        />
       </main>
     </>
   );
